@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Company Services archive">
+    <output-path>$PROJECT_DIR$/out/artifacts/Company_Services_archive</output-path>
+    <root id="archive" name="Company Services archive.war">
+      <element id="artifact" artifact-name="Company Services" />
+    </root>
+  </artifact>
+</component>
