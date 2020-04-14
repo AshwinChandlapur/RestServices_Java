@@ -1,3 +1,4 @@
+import business.BusinessLayer;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -19,9 +20,9 @@ public class MyTester {
 //        System.out.println(p2.getDepartmentByID("ay6582",2).getEntity());
 //        System.out.println(p2.getAllDepartments("ay6582").getEntity());
 //        System.out.println(p2.getEmployeeByID("ay6582",1).getEntity());
-        System.out.println(p2.getAllEmployees("ay6582").getEntity());
-//        System.out.println(p2.getTimeCardByID("ay6582",1).getEntity());
-//        System.out.println(p2.getTimeCardByEmployeeId("ay6582",1).getEntity());
+//        System.out.println(p2.getAllEmployees("ay6582").getEntity());
+        System.out.println(p2.getTimeCardByID("ay6582",2).getEntity());
+        System.out.println(p2.getTimeCardByEmployeeId("ay6582",1).getEntity());
 //
 //        Department department = new Department(2,"ay6582","IT","d11","Rochester");
 //        System.out.println(p2.updateDepartment(department).getEntity());
@@ -40,6 +41,9 @@ public class MyTester {
 
         System.out.println(p2.updateEmployee(employee).getEntity());
 
+        BusinessLayer bl = new BusinessLayer();
+        System.out.println(bl.validateTime("2018-06-16 12:30:00"));
+        System.out.println(bl.compareTimeStamps("2018-06-16 12:30:00","2018-06-16 15:37:00"));
 
 
 
